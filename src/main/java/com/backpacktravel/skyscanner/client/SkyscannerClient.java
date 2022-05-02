@@ -65,7 +65,6 @@ public class SkyscannerClient {
 
         try {
             ResponseEntity<BestFlightDto> response = restTemplate.exchange(url, HttpMethod.GET, request, BestFlightDto.class);
-            System.out.println("Response: " + response.getBody());
             return response.getBody();
 
         } catch (RestClientException e) {
